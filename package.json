@@ -1,0 +1,21 @@
+{
+  "name": "test_toimi",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polechkapo/test_toimi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polechkapo/test_toimi/issues"
+  },
+  "homepage": "https://github.com/polechkapo/test_toimi#readme",
+  "description": ""
+}
