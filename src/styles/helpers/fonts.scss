@@ -1,16 +1,22 @@
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "Gilroy";
+  font-family: "Gilroy",sans-serif;
   font-display: swap;
   src: url("../../fonts/Gilroy-Regular.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "Gilroy-Thin";
+  font-family: "Gilroy-Thin",sans-serif;
   font-display: swap;
   src: url("../../fonts/Gilroy-Thin.woff") format("woff");
 }
+
+@font-face {
+  font-style: normal;
+  font-family: "Circe",sans-serif;
+  font-display: swap;
+  src: url("../../fonts/Circe-Thin.woff") format("woff");
+}
+
 
