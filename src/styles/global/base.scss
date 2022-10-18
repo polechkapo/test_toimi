@@ -21,6 +21,16 @@ body {
   margin: 0;
 }
 
+input {
+  border: none;
+  border-bottom: 1px solid var(--inputs-border);
+  outline:none;
+}
+
+button {
+  cursor: pointer;
+}
+
 html {
   height: 100%;
   width: 100%;

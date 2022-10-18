@@ -3,9 +3,9 @@
   background: linear-gradient(93.29deg, #388af3 21.04%, #a483e2 88.77%);
   background-size: cover;
   &__top {
-    display: flex;
-    justify-content: space-between;
-    width: 101%;
+   justify-content: space-between;
+   width: 100%;
+   display: flex;
   }
   &__list {
     list-style-type: none;
@@ -24,7 +24,8 @@
   &__bottom {
     display: flex;
     flex-direction: row;
-    gap: 681px;
+    justify-content: space-between;
+    width: 100%;
   }
   &__list-contacts {
     list-style-type: none;
@@ -42,12 +43,14 @@
   &__lists {
     display: flex;
     gap: 73px;
+    margin-left: 6%;
   }
   &__items {
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    white-space: nowrap;
   }
   &__subtitle {
     font-weight: 700;
@@ -58,9 +61,17 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: 106px;
+   gap: 60px;
    padding-top: 42px;
-   width: 63%;
+   width: 62%;
    margin: 0 auto;
+  }
+  &__list-contacts {
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 13px;
+   margin-top: 63px;
+   margin-left: -128px;
   }
 }

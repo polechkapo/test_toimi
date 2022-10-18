@@ -2,9 +2,10 @@
   width: 741px;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin-left: 19%;
   margin-top: 146px;
   margin-bottom: 160px;
+  margin-top: 7%;
 
   &__breadcrums {
     padding: 0;
@@ -23,29 +24,73 @@
   }
 
   &__form {
-   display: flex;
-   flex-direction: row;
-   margin-top: 120px;
-   margin-bottom: 162px;
-   gap: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+    margin-bottom: 162px;
+    gap: 50px;
   }
   &__form-label {
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
   &__form-name {
-   width: 413px;
+    width: 413px;
+    height: 35px;
+  }
+  &__form-email {
+    height: 35px;
+    width: 278px;
   }
   &__form-inputs {
-   display: flex;
-   gap: 30px;
+    display: flex;
+    gap: 30px;
   }
   &__form-wrapper {
-   display: flex;
-   flex-direction: column;
-   gap: 57px;
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
   }
   &__form-checkbox {
-   margin-top: -30px;
+    margin-top: -30px;
   }
+  &__form-label {
+    font-family: "Gilroy-Thin", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--text-inputs);
+  }
+  &__span {
+    color: red;
+    margin-left: 3px;
+  }
+  &__description {
+    font-family: "Gilroy-Thin", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--basic-black);
+    width: 542px;
+  }
+  &__email {
+    font-weight: 600;
+    color: var(--text-blue);
+    text-decoration: none;
+  }
+  &__form-comment {
+   width: 741px;
+   height: 35px;
+  }
+}
+
+input::placeholder {
+  font-family: "Gilroy-Thin", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 26px;
+  line-height: 31px;
+  color: var(--text-inputs);
 }

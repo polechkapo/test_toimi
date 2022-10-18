@@ -43,8 +43,8 @@ function Footer(props) {
          </div>
          </div>
          <div className='footer__bottom'>
-            <p>© Company 2022. All rights reserved.</p>
-            <p>Политика конфиденциальноcти</p>
+            <p className='footer__items'>© Company 2022. All rights reserved.</p>
+            <p className='footer__items'>Политика конфиденциальноcти</p>
          </div>
          </div>
       </div>
