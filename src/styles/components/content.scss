@@ -8,7 +8,7 @@
   width: 54%;
 
   &__container {
-   width: 112%;
+    width: 112%;
   }
 
   &__breadcrums {
@@ -183,7 +183,7 @@
   &__form-name:active + &__form-name-p,
   &__form-name:valid + &__form-name-p {
     top: -171%;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   &__form-checkbox-input {
@@ -236,8 +236,44 @@
     position: relative;
     &::before {
       position: absolute;
-      content: '–';
+      content: "–";
       left: -18%;
+    }
+  }
+}
+
+@media (min-width: 922px) and (max-width: 1718px) {
+  .content {
+    margin-left: 42px;
+
+    &__list {
+      display: none;
+    }
+
+    &__title {
+      font-size: 60px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__form {
+      margin-top: 100px;
+      position: relative;
+    }
+
+    &__form-button {
+      position: absolute;
+      top: 121%;
+      right: 59%;
+    }
+
+    &__form-name:hover + &__form-name-p,
+    &__form-name:active + &__form-name-p,
+    &__form-name:valid + &__form-name-p {
+      top: -171%;
+      font-size: 14px;
     }
   }
 }
@@ -253,6 +289,6 @@
   background-repeat: no-repeat;
 }
 
-input[type="text"]{
-   color: var(--basic-black)
+input[type="text"] {
+  color: var(--basic-black);
 }

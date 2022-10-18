@@ -116,4 +116,16 @@
       left: 99%;
     }
   }
+
+  @media (min-width: 922px) and (max-width: 1718px) {
+    &__list {
+      display: none;
+    }
+    &__button::before {
+      top: 20%;
+    }
+    &__button::after {
+        top: -70%;
+    }
+  }
 }

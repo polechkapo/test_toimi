@@ -52,15 +52,15 @@
   }
 
   &__subtitle-services {
-   &::after {
+    &::after {
       left: 42%;
-   }
+    }
   }
 
   &__subtitle-contacts {
-   &::after {
+    &::after {
       left: 80%;
-   }
+    }
   }
   &__list-btn {
     background-color: transparent;
@@ -111,5 +111,27 @@
   &__items-link-phone {
     font-size: 20px;
     line-height: 24px;
+  }
+}
+
+@media (min-width: 922px) and (max-width: 1718px) {
+  .footer {
+    &__top {
+      flex-direction: column;
+      padding-left: 40px;
+    }
+    &__lists {
+      margin-left: 0;
+    }
+
+    &__list-company {
+      margin-left: 70px;
+      margin-right: 150px;
+    }
+
+    &__bottom {
+      padding-left: 40px;
+      padding-right: 147px;
+    }
   }
 }
