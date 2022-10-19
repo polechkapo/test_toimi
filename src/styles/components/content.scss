@@ -278,6 +278,53 @@
   }
 }
 
+@media (max-width: 921px) {
+  .content {
+    margin-left: 10%;
+    &__items {
+      font-size: 12px;
+      line-height: 14px;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 40px;
+      margin-top: 57px;
+    }
+    &__description {
+      font-size: 16px;
+      line-height: 30px;
+      width: 318px;
+    }
+    &__form-inputs {
+      flex-direction: column;
+    }
+    &__form-name {
+      width: 322px;
+    }
+
+    &__form-name-p {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    &__form-checkbox-input::before {
+      height: 30px;
+      width: 30px;
+      left: -6px;
+    }
+
+    &__form-button {
+      position: absolute;
+      top: 78%;
+      right: 35%;
+    }
+
+    &__form-checkbox-input::after {
+      left: 35%;
+    }
+  }
+}
+
 .submited::after {
   transition: 0.8s ease !important;
   top: -5% !important;

@@ -26,7 +26,7 @@ function Footer(props) {
             <li className='footer__items'>Контакты</li>
          </ul>
          </div>
-         <div>
+         <div className='footer__list-contacts-wrapper'>
             <h3 className='footer__subtitle footer__subtitle-contacts'>Контакты</h3>
          <ul className='footer__list'>
             <li className='footer__items'>Скачать презентацию</li>

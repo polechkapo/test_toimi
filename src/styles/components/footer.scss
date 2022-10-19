@@ -4,9 +4,8 @@
   background-size: cover;
   &__top {
     display: flex;
-    padding-left: 18%;
+    padding-left: 11%;
     padding-right: 18%;
-    width: 100%;
   }
   &__list {
     list-style-type: none;
@@ -29,6 +28,7 @@
     width: 100%;
     padding-left: 18%;
     padding-right: 18%;
+    margin-bottom: 20px;
   }
   &__list-contacts {
     list-style-type: none;
@@ -118,7 +118,7 @@
   .footer {
     &__top {
       flex-direction: column;
-      padding-left: 40px;
+      padding-left: 174px;
     }
     &__lists {
       margin-left: 0;
@@ -132,6 +132,54 @@
     &__bottom {
       padding-left: 40px;
       padding-right: 147px;
+      margin-bottom: 26px;
+    }
+
+    &__list-contacts {
+      padding-left: 58px;
+    }
+  }
+}
+
+@media (max-width: 921px) {
+  .footer {
+    &__list {
+      flex-direction: column;
+    }
+    &__top {
+      flex-direction: column;
+    }
+    &__bottom {
+      flex-direction: column;
+    }
+    &__list-company {
+      margin: 0;
+    }
+    &__lists {
+      margin-left: 0;
+      flex-direction: column;
+    }
+    &__top {
+      padding-left: 0;
+    }
+    &__subtitle::after {
+      left: 58%;
+    }
+    &__subtitle-services {
+      width: 178px;
+    }
+    &__list-contacts-wrapper {
+      position: relative;
+    }
+    &__list-contacts {
+      position: absolute;
+      top: 154%;
+      left: 40%;
+    }
+    &__bottom {
+      padding-left: 12%;
+      gap: 10px;
+      margin-bottom: 21px;
     }
   }
 }

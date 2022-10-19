@@ -4,7 +4,6 @@
   margin-right: 88px;
   margin-top: 50px;
   align-items: center;
-  justify-content: space-between;
 
   &__title {
     font-weight: 800;
@@ -116,16 +115,120 @@
       left: 99%;
     }
   }
+  &__list-wrapper {
+    display: flex;
+    margin-left: 36%;
+    margin-left: 32%;
+    gap: 486px;
+  }
+  &__toggle {
+    display: none;
+  }
+}
 
-  @media (min-width: 922px) and (max-width: 1718px) {
-    &__list {
+@media (min-width: 922px) and (max-width: 1718px) {
+  .header {
+    justify-content: space-between;
+    &__list-info {
       display: none;
     }
+
+    &__button {
+      white-space: nowrap;
+    }
     &__button::before {
-      top: 20%;
+      top: 36%;
     }
     &__button::after {
-        top: -70%;
+      top: -7%;
+    }
+
+    &__header__list-lang {
+      display: flex;
+    }
+
+    &__list-wrapper {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 921px) {
+  .header {
+    &__title {
+      font-size: 30px;
+      line-height: 38px;
+    }
+    margin-left: 33px;
+    margin-right: 40px;
+    position: relative;
+    &__list-wrapper {
+      display: none;
+    }
+
+    &__toggle {
+      background-color: transparent;
+      border: none;
+      margin-left: auto;
+      display: block;
+    }
+
+    &__list-info {
+      display: none;
+    }
+
+    &__list-wrapper-opened {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 89px;
+      background-color: var(--basic-white);
+      width: 120%;
+      z-index: 10;
+      padding-left: 40px;
+      left: -40px;
+    }
+
+    &__list-info-opened {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+    &__right-opened {
+      flex-direction: column;
+    }
+    &__list-lang-opened {
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    &__right-opened {
+      flex-direction: column;
+      margin-bottom: 44px;
+    }
+
+    &__button::after {
+      width: 0;
+      height: 0;
+    }
+
+    &__button::before {
+      width: 0;
+      height: 0;
+    }
+
+    &__items-contacts::after {
+      width: 0;
+      height: 0;
+    }
+
+    &__items-lang-ru::after {
+      width: 0;
+      height: 0;
+    }
+
+    &__button {
+      padding: 0;
     }
   }
 }
