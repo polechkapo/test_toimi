@@ -1,67 +1,73 @@
 import React, { useState } from "react";
+import styles from "../Content/content.module.scss";
+import classNames from "classnames/bind";
+
+const cx = classNames.bind(styles);
 
 function Form() {
-  const [send, setSend] = useState("Отправить");
-  const [plane, setPlain] = useState(false);
-  const handleButton = (event) => {
+  // const [send, setSend] = useState();
+  // const [animation, setAnimation] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(["Отправить", false])
+  const handleSubmit = (event) => {
     event.preventDefault();
-    setPlain(true);
-    setSend("Ваше сообщение отправлено!");
+    // setAnimation(true);
+    // setSend();
+    setFormSubmitted(["Ваше сообщение отправлено!", true])
     event.target.reset();
     setTimeout(() => {
-      setPlain(false);
-      setSend("Отправить");
+      setFormSubmitted((["Отправить", false]))
     }, 2000);
   };
+
   return (
-    <div className="content__container">
-      <form className="content__form" onSubmit={handleButton}>
-        <div className="content__form-wrapper">
-          <div className="content__form-inputs">
-            <label htmlFor="name" className="content__form-label">
+    <div className={styles.content__container}>
+      <form className={styles.content__form} onSubmit={handleSubmit}>
+        <div className={cx("content__form-wrapper")}>
+          <div className={cx("content__form-inputs")}>
+            <label htmlFor="name" className={cx("content__form-label")}>
               <input
                 type="text"
                 name="name"
-                className="content__form-name"
+                className={cx("content__form-name")}
                 required
               />
-               <p className="content__form-name-p">
-                Ваше имя<span className="content__span">*</span>
+              <p className={cx("content__form-name-p")}>
+                Ваше имя<span className={styles.content__span}>*</span>
               </p>
             </label>
-            <label htmlFor="name" className="content__form-label">
+            <label htmlFor="name" className={cx("content__form-label")}>
               <input
                 type="text"
                 name="name"
-                className="content__form-name content__form-email"
+                className={cx("content__form-name", "content__form-email")}
                 required
               />
-               <p className="content__form-name-p">
-               Ваш E-Mail<span className="content__span">*</span>
+              <p className={cx("content__form-name-p")}>
+                Ваш E-Mail<span className={styles.content__span}>*</span>
               </p>
             </label>
           </div>
-          <label htmlFor="name" className="content__form-label">
-              <input
-                type="text"
-                name="name"
-                className="content__form-name content__form-comment"
-                required
-              />
-               <p className="content__form-name-p">
-               Комментарий<span className="content__span">*</span>
-              </p>
-            </label>
-          <div className="content__form-radio-wrapper">
+          <label htmlFor="name" className={cx("content__form-label")}>
+            <input
+              type="text"
+              name="name"
+              className={cx("content__form-name", "content__form-comment")}
+              required
+            />
+            <p className={cx("content__form-name-p")}>
+              Комментарий<span className={styles.content__span}>*</span>
+            </p>
+          </label>
+          <div className={cx("content__form-radio-wrapper")}>
             <input
               type="radio"
               name="policy"
-              className="content__form-checkbox-input"
+              className={cx("content__form-checkbox-input")}
               required
             />
-            <label htmlFor="policy" className="content__form-checkbox">
+            <label htmlFor="policy" className={cx("content__form-checkbox")}>
               Согласен с{" "}
-              <a class="content__email content__policy" href="#">
+              <a className={cx("content__email", "content__policy")} href="#">
                 Политикой конфиденциальноcти
               </a>
             </label>
@@ -69,13 +75,14 @@ function Form() {
         </div>
         <button
           className={
-            plane ? "content__form-button submited" : "content__form-button"
+            formSubmitted[1]
+              ? cx("content__form-button", "submited")
+              : cx("content__form-button")
           }
           type="submit"
-          onSubmit={handleButton}
           name="btn"
         >
-          {send}
+          {formSubmitted[0]}
         </button>
       </form>
     </div>

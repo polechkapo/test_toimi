@@ -18,8 +18,8 @@
     gap: 21px;
   }
 
-  &__items {
-    font-family: "Gilroy-Thin", sans-serif;
+  &__breadcrums-item {
+    font-family: "Gilroy", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -50,7 +50,7 @@
   &__form-name {
     width: 413px;
     height: 35px;
-    font-family: "Gilroy-Thin", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-style: normal;
     font-weight: 200;
     font-size: 26px;
@@ -78,7 +78,7 @@
     padding-top: 4px;
   }
   &__form-label {
-    font-family: "Gilroy-Thin", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
@@ -91,7 +91,7 @@
     margin-left: 3px;
   }
   &__description {
-    font-family: "Gilroy-Thin", sans-serif;
+    font-family: "Gilroy", sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
@@ -136,7 +136,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url("../../img/send_pic.svg");
+      background-image: url("../../../img/send_pic.svg");
       width: 57px;
       height: 42px;
       top: 35%;
@@ -157,7 +157,7 @@
       transform: scale(1.7);
       content: "";
       position: absolute;
-      background-image: url("../../img/send_pic.svg");
+      background-image: url("../../../img/send_pic.svg");
       background-repeat: no-repeat;
     }
     &:active {
@@ -169,8 +169,8 @@
   &__form-name-p {
     position: absolute;
     top: -83%;
-    z-index: 10;
-    font-family: "Gilroy-Thin", sans-serif;
+    z-index: 9;
+    font-family: "Gilroy", sans-serif;
     font-style: normal;
     font-weight: 200;
     font-size: 26px;
@@ -179,7 +179,7 @@
     transition: 0.3s ease;
   }
 
-  &__form-name:hover + &__form-name-p,
+  &__form-name:focus + &__form-name-p,
   &__form-name:active + &__form-name-p,
   &__form-name:valid + &__form-name-p {
     top: -171%;
@@ -231,7 +231,7 @@
     line-height: 27px;
   }
 
-  &__items-contacts {
+  &__breadcrums-contact {
     font-weight: 600;
     position: relative;
     &::before {
@@ -269,7 +269,7 @@
       right: 59%;
     }
 
-    &__form-name:hover + &__form-name-p,
+    &__form-name:focus + &__form-name-p,
     &__form-name:active + &__form-name-p,
     &__form-name:valid + &__form-name-p {
       top: -171%;
@@ -281,7 +281,8 @@
 @media (max-width: 921px) {
   .content {
     margin-left: 10%;
-    &__items {
+    position: relative;
+    &__breadcrums-item {
       font-size: 12px;
       line-height: 14px;
     }
@@ -289,6 +290,7 @@
       font-size: 40px;
       line-height: 40px;
       margin-top: 57px;
+      margin-bottom: 45px;
     }
     &__description {
       font-size: 16px;
@@ -297,6 +299,7 @@
     }
     &__form-inputs {
       flex-direction: column;
+      gap: 60px;
     }
     &__form-name {
       width: 322px;
@@ -305,6 +308,7 @@
     &__form-name-p {
       font-size: 22px;
       line-height: 26px;
+      top: 0;
     }
 
     &__form-checkbox-input::before {
@@ -315,12 +319,27 @@
 
     &__form-button {
       position: absolute;
-      top: 78%;
-      right: 35%;
+      top: 84%;
+      right: 3%;
     }
 
     &__form-checkbox-input::after {
       left: 35%;
+    }
+
+    &__breadcrums-contact::before {
+      left: -23%;
+    }
+
+    &__form-name:focus + &__form-name-p,
+    &__form-name:active + &__form-name-p,
+    &__form-name:valid + &__form-name-p {
+      top: -100%;
+      font-size: 16px;
+    }
+
+    &__form {
+      margin-top: 80px;
     }
   }
 }
@@ -332,7 +351,7 @@
   transform: scale(0.5) !important;
   content: "";
   position: absolute;
-  background-image: url("../../img/send_pic.svg");
+  background-image: url("../../../img/send_pic.svg");
   background-repeat: no-repeat;
 }
 

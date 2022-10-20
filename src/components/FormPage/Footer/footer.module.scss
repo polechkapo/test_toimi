@@ -143,6 +143,7 @@
 
 @media (max-width: 921px) {
   .footer {
+    position: relative;
     &__list {
       flex-direction: column;
     }
@@ -173,8 +174,8 @@
     }
     &__list-contacts {
       position: absolute;
-      top: 154%;
       left: 40%;
+      bottom: 16%;
     }
     &__bottom {
       padding-left: 12%;
