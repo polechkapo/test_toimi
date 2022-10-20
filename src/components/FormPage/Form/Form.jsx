@@ -5,17 +5,13 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 function Form() {
-  // const [send, setSend] = useState();
-  // const [animation, setAnimation] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(["Отправить", false])
+  const [formSubmitted, setFormSubmitted] = useState(false)
   const handleSubmit = (event) => {
     event.preventDefault();
-    // setAnimation(true);
-    // setSend();
-    setFormSubmitted(["Ваше сообщение отправлено!", true])
+    setFormSubmitted(true)
     event.target.reset();
     setTimeout(() => {
-      setFormSubmitted((["Отправить", false]))
+      setFormSubmitted(false)
     }, 2000);
   };
 
@@ -75,14 +71,14 @@ function Form() {
         </div>
         <button
           className={
-            formSubmitted[1]
+            formSubmitted
               ? cx("content__form-button", "submited")
               : cx("content__form-button")
           }
           type="submit"
           name="btn"
         >
-          {formSubmitted[0]}
+          {formSubmitted ? "Ваше сообщение отправлено" : "Отправлено"}
         </button>
       </form>
     </div>
