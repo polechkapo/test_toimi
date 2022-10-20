@@ -78,7 +78,7 @@ function Form() {
           type="submit"
           name="btn"
         >
-          {formSubmitted ? "Ваше сообщение отправлено" : "Отправлено"}
+          {formSubmitted ? "Ваше сообщение отправлено" : "Отправить"}
         </button>
       </form>
     </div>
