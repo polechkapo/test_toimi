@@ -5,7 +5,8 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 function Form() {
-  const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [checked, setChecked] = useState(false)
   const handleSubmit = (event) => {
     event.preventDefault();
     setFormSubmitted(true)
@@ -60,6 +61,8 @@ function Form() {
               name="policy"
               className={cx("content__form-checkbox-input")}
               required
+              checked={checked}
+              onClick={() => setChecked(!checked)}
             />
             <label htmlFor="policy" className={cx("content__form-checkbox")}>
               Согласен с{" "}
