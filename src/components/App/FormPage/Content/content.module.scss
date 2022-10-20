@@ -363,4 +363,5 @@
 
 input[type="text"], input[type="email"]{
   color: var(--basic-black);
+  -webkit-appearance: none;
 }
