@@ -19,6 +19,7 @@ body {
   color: var(--basic-black);
   background-color: var(--basic-white);
   margin: 0;
+  overscroll-behavior-y: none;
 }
 
 input {
