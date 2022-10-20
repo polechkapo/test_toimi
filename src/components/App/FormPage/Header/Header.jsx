@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./header.module.scss";
-import toggleBtn from "../../../img/toggle-close.svg";
+import toggleBtn from "../../../../img/toggle-close.svg";
 import classNames from "classnames/bind";
 
 const cx = classNames.bind(styles);

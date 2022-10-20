@@ -1,6 +1,6 @@
 import React from "react";
-import telegram from "../../../img/telegram.svg";
-import whatsapp from "../../../img/whatsapp.svg";
+import telegram from "../../../../img/telegram.svg";
+import whatsapp from "../../../../img/whatsapp.svg";
 import styles from "./footer.module.scss";
 import classNames from "classnames/bind";
 

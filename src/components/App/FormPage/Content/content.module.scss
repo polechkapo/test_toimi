@@ -136,7 +136,7 @@
     &::after {
       content: "";
       position: absolute;
-      background-image: url("../../../img/send_pic.svg");
+      background-image: url("../../../../img/send_pic.svg");
       width: 57px;
       height: 42px;
       top: 35%;
@@ -157,7 +157,7 @@
       transform: scale(1.7);
       content: "";
       position: absolute;
-      background-image: url("../../../img/send_pic.svg");
+      background-image: url("../../../../img/send_pic.svg");
       background-repeat: no-repeat;
     }
     &:active {
@@ -351,7 +351,7 @@
   transform: scale(0.5) !important;
   content: "";
   position: absolute;
-  background-image: url("../../../img/send_pic.svg");
+  background-image: url("../../../../img/send_pic.svg");
   background-repeat: no-repeat;
 }
 

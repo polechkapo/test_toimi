@@ -1,4 +1,4 @@
-import FormPage from "../FormPage/FormPage";
+import FormPage from "./FormPage/FormPage";
 import "../../styles/styles.scss";
 
 function App() {
