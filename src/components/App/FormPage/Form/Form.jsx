@@ -34,8 +34,8 @@ function Form() {
             </label>
             <label htmlFor="name" className={cx("content__form-label")}>
               <input
-                type="text"
-                name="name"
+                type="email"
+                name="email"
                 className={cx("content__form-name", "content__form-email")}
                 required
               />
@@ -47,7 +47,7 @@ function Form() {
           <label htmlFor="name" className={cx("content__form-label")}>
             <input
               type="text"
-              name="name"
+              name="comment"
               className={cx("content__form-name", "content__form-comment")}
               required
             />

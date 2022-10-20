@@ -168,7 +168,7 @@
 
   &__form-name-p {
     position: absolute;
-    top: -83%;
+    top: 0;
     z-index: 9;
     font-family: "Gilroy", sans-serif;
     font-style: normal;
@@ -182,7 +182,7 @@
   &__form-name:focus + &__form-name-p,
   &__form-name:active + &__form-name-p,
   &__form-name:valid + &__form-name-p {
-    top: -171%;
+    top: -100%;
     font-size: 16px;
   }
 
@@ -266,7 +266,8 @@
     &__form-button {
       position: absolute;
       top: 121%;
-      right: 59%;
+      left: 0%;
+      margin-left: 0;
     }
 
     &__form-name:focus + &__form-name-p,
@@ -282,6 +283,8 @@
   .content {
     margin-left: 10%;
     position: relative;
+    margin-right: 10%;
+    width: 80%;
     &__breadcrums-item {
       font-size: 12px;
       line-height: 14px;
@@ -320,7 +323,8 @@
     &__form-button {
       position: absolute;
       top: 84%;
-      right: 3%;
+      left: 0;
+      margin-left: 0;
     }
 
     &__form-checkbox-input::after {
@@ -355,6 +359,6 @@
   background-repeat: no-repeat;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"]{
   color: var(--basic-black);
 }
