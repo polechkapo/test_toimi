@@ -6,13 +6,13 @@ const cx = classNames.bind(styles);
 
 function Form() {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
-    setFormSubmitted(true)
+    setFormSubmitted(true);
     event.target.reset();
     setTimeout(() => {
-      setFormSubmitted(false)
+      setFormSubmitted(false);
     }, 2000);
   };
 
@@ -34,8 +34,8 @@ function Form() {
             </label>
             <label htmlFor="name" className={cx("content__form-label")}>
               <input
-                type="email"
-                name="email"
+                type="text"
+                name="name"
                 className={cx("content__form-name", "content__form-email")}
                 required
               />
@@ -44,7 +44,7 @@ function Form() {
               </p>
             </label>
           </div>
-          <label htmlFor="name" className={cx("content__form-label")}>
+          <label htmlFor="comment" className={cx("content__form-label")}>
             <input
               type="text"
               name="comment"

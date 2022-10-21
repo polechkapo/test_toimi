@@ -339,7 +339,8 @@
 
     &__form-name:focus + &__form-name-p,
     &__form-name:active + &__form-name-p,
-    &__form-name:valid + &__form-name-p {
+    &__form-name:valid + &__form-name-p,
+    &__form-name:hover + &__form-name-p {
       top: -100%;
       font-size: 16px;
     }
@@ -363,5 +364,5 @@
 
 input[type="text"], input[type="email"]{
   color: var(--basic-black);
-  -webkit-appearance: none;
 }
+
