@@ -1,0 +1,236 @@
+.header {
+  display: flex;
+  margin-left: 50px;
+  margin-right: 88px;
+  margin-top: 50px;
+  align-items: center;
+
+  &__title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--logo-black);
+    text-transform: uppercase;
+  }
+
+  &__items {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "Gilroy", sans-serif;
+    text-decoration: none;
+    color: var(--basic-black);
+  }
+  &__items-lang {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text-grey);
+  }
+  &__items-lang-option {
+    color: var(--text-blue);
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 7px;
+      bottom: -10px;
+      left: 36%;
+      background-color: var(--text-blue);
+      border-radius: 20px;
+    }
+  }
+
+  &__items-contacts {
+    color: var(--text-blue);
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 7px;
+      height: 7px;
+      bottom: -10px;
+      left: 45%;
+      background-color: var(--text-blue);
+      border-radius: 20px;
+    }
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    white-space: nowrap;
+    padding: 0;
+  }
+
+  &__right {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__list-lang {
+    gap: 15px;
+    margin-left: 0;
+    margin-right: 0;
+    &__right {
+      display: flex;
+    }
+  }
+
+  &__button {
+    font-family: "Gilroy", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-blue);
+    background-color: transparent;
+    border: none;
+    position: relative;
+    white-space: nowrap;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 61px;
+      height: 61px;
+      background-color: transparent;
+      border: 1px solid #e2e2e2;
+      border-radius: 70px;
+      top: 0%;
+      left: 74%;
+      z-index: -1;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 14px;
+      background-image: url("../../../../img/arrow.svg");
+      top: 36%;
+      left: 99%;
+    }
+  }
+  &__list-wrapper {
+    display: flex;
+    margin-left: 36%;
+    margin-left: 32%;
+    gap: 470px;
+  }
+  &__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 922px) and (max-width: 1718px) {
+  .header {
+    justify-content: space-between;
+    &__list-info {
+      display: none;
+    }
+
+    &__button {
+      white-space: nowrap;
+    }
+    &__button::before {
+      top: 36%;
+    }
+
+    &__header__list-lang {
+      display: flex;
+    }
+
+    &__list-wrapper {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 921px) {
+  .header {
+    &__title {
+      font-size: 30px;
+      line-height: 38px;
+    }
+    margin-left: 33px;
+    margin-right: 40px;
+    position: relative;
+    &__list-wrapper {
+      display: none;
+    }
+
+    &__toggle {
+      background-color: transparent;
+      border: none;
+      margin-left: auto;
+      display: block;
+    }
+
+    &__list-info {
+      display: none;
+    }
+
+    &__list-wrapper-opened {
+      display: flex;
+      flex-direction: column;
+      top: 117px;
+      background-color: var(--basic-white);
+      width: 120%;
+      z-index: 10;
+      position: fixed;
+      height: 100vh;
+      width: 100wh;
+      transition: 0.5s ease;
+      padding-top: 20px;
+      width: 100vw;
+    }
+
+    &__list-info-opened {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+    &__right-opened {
+      flex-direction: column;
+    }
+    &__list-lang-opened {
+      flex-direction: column;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    &__right-opened {
+      flex-direction: column;
+      margin-bottom: 44px;
+    }
+
+    &__button::after {
+      width: 0;
+      height: 0;
+    }
+
+    &__button::before {
+      top: 13%;
+      left: 104%;
+    }
+
+    &__items-contacts::after {
+      width: 0;
+      height: 0;
+    }
+
+    &__items-lang-option::after {
+      width: 0;
+      height: 0;
+    }
+
+    &__button {
+      padding: 0;
+    }
+  }
+}
